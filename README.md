@@ -1,12 +1,7 @@
-# Grupo04
-Project Repository AI Class - Group Four
+# Curriculum Vitae analysis 
 
-HOLA AMIGOS, 
+AI aplication that reads and understands CVs from possible candidates
 
-Este es el test numero uno de nuestro gran proyecto de AI
+group04 - S10B
 
-va a ser el mejor 
-
-:) 
-
-commit hecho por el jefe mfpachecog
+*mfpachecog the boss*
