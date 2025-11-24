@@ -7,10 +7,10 @@ from src.services.database import db_manager
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup: Conectar a Azure Cosmos DB
-    print("Conectando a Base de Datos...")
+    print("⚡ Conectando a Azure Cosmos DB...")
     db_manager.client = AsyncIOMotorClient(settings.DATABASE_URL)
-    print("¡Conexión Exitosa!")
+    print("✅ Conexión establecida.")
     yield
     # Shutdown: Cerrar conexión
-    print("Cerrando conexión a Base de Datos...")
+    print("🛑 Cerrando conexión a base de datos...")
     db_manager.client.close()
