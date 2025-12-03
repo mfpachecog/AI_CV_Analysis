@@ -37,7 +37,15 @@ async def perform_analysis(request: AnalysisRequest, db = Depends(get_database))
     }
 
     # 5. Guardar en Azure Cosmos DB
-    await db["analysis_results"].insert_one(doc_to_save)
+    # 5. Guardar en Azure Cosmos DB
+    try:
+        await db["analysis_results"].insert_one(doc_to_save)
+    except Exception as e:
+        print(f"WARNING: Failed to save analysis result to DB: {e}")
+        # Add warning to features so client knows
+        if "features" not in analysis_result:
+            analysis_result["features"] = {}
+        analysis_result["features"]["db_save_error"] = str(e)
 
     # 6. Retornar el resultado al usuario
     #    (Aplanamos la respuesta para que coincida con AnalysisResult)
