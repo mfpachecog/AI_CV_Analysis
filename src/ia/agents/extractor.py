@@ -1,5 +1,8 @@
 from typing import List, Set
 import re
+from src.services.config import settings
+from azure.ai.formrecognizer import DocumentAnalysisClient
+from azure.core.credentials import AzureKeyCredential
 
 class ExtractorAgent:
     """
@@ -13,18 +16,23 @@ class ExtractorAgent:
         "docker", "kubernetes", "react", "scrum", "git", "linux"
     }
 
-    def extract_skills(self, text: str) -> Set[str]:
-        """
-        Busca palabras clave en el texto y devuelve un set de skills únicas.
-        """
+    def __init__(self):
+        # Inicializamos el cliente de Azure solo si las claves existen
+        try:
+            self.doc_client = DocumentAnalysisClient(
+                endpoint=settings.AZURE_DOC_ENDPOINT,
+                credential=AzureKeyCredential(settings.AZURE_DOC_KEY)
+            )
+            print("✅ ExtractorAgent conectado a Azure AI.")
+        except Exception as e:
+            print(f"⚠️ Azure AI no configurado: {e}")
+            self.doc_client = None
+
+    def extract_from_text(self, text: str) -> Set[str]:
+        """Modo 1: Recibe texto plano (ej: desde n8n)"""
         found_skills = set()
-        # Normalizamos a minúsculas para comparar
         text_lower = text.lower()
-        
-        # Búsqueda simple (en el futuro esto lo hará un LLM)
         for skill in self.KNOWN_SKILLS:
-            # Usamos regex para buscar la palabra completa (evitar 'java' en 'javascript')
             if re.search(r'\b' + re.escape(skill) + r'\b', text_lower):
                 found_skills.add(skill)
-                
         return found_skills
