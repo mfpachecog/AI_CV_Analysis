@@ -1,35 +1,47 @@
-from src.ia.agents.extractor import ExtractorAgent
-from src.ia.agents.processor import ProcessorAgent
-from src.ia.agents.scorer import AffinityScorerAgent
-from typing import Dict, Any
+from crewai import Crew
+from src.ia.crew.agents import CVAnalysisAgents
+from src.ia.crew.tasks import CVAnalysisTasks
+import json
 
 class CrewOrchestrator:
-    """
-    Coordina el flujo completo: Texto -> Skills -> Métricas -> Score
-    """
-    def __init__(self):
-        self.extractor = ExtractorAgent()
-        self.processor = ProcessorAgent()
-        self.scorer = AffinityScorerAgent()
+    def run_analysis(self, candidate_profile: str, job_description: str):
+        # 1. Instanciar Agentes y Tareas
+        agents = CVAnalysisAgents()
+        tasks = CVAnalysisTasks()
 
-    def run_analysis(self, candidate_profile: str, job_description: str) -> Dict[str, Any]:
-        # 1. Extracción
-        cand_skills = self.extractor.extract_skills(candidate_profile)
-        job_skills = self.extractor.extract_skills(job_description)
-        
-        # 2. Procesamiento Matemático
-        features = self.processor.calculate_similarity(cand_skills, job_skills)
-        
-        # 3. Puntuación y Razón
-        score, reason = self.scorer.score_affinity(features)
-        
-        # 4. Empaquetar resultado
-        return {
-            "affinity_score": score,
-            "match_reason": reason,
-            "features": features,
-            "extracted_data": {
-                "candidate_skills": list(cand_skills),
-                "job_skills": list(job_skills)
+        extractor = agents.extractor_agent()
+        processor = agents.processor_agent()
+        scorer = agents.scorer_agent()
+
+        # 2. Crear las Tareas encadenadas
+        # Tarea A: Leer Candidato
+        task_extract_cand = tasks.extraction_task(extractor, "Candidato", candidate_profile)
+        # Tarea B: Leer Oferta
+        task_extract_job = tasks.extraction_task(extractor, "Oferta Laboral", job_description)
+        # Tarea C: Comparar (Processor) - Depende de A y B
+        task_process = tasks.processing_task(processor, task_extract_cand, task_extract_job) 
+        # Tarea D: Puntuar (Scorer) - Depende de C
+        task_score = tasks.scoring_task(scorer, task_process)
+
+        # 3. Armar el Equipo (Crew)
+        crew = Crew(
+            agents=[extractor, processor, scorer],
+            tasks=[task_extract_cand, task_extract_job, task_process, task_score],
+            verbose=True
+        )
+
+        # 4. ¡Acción!
+        result = crew.kickoff()
+
+        # 5. Parsear el resultado final (que esperamos sea JSON)
+        try:
+            # A veces los LLM ponen ```json ... ```, limpiamos eso
+            clean_result = str(result).replace("```json", "").replace("```", "")
+            return json.loads(clean_result)
+        except:
+            # Fallback si el LLM no devolvió JSON puro
+            return {
+                "affinity_score": 0,
+                "match_reason": "Error procesando respuesta de IA: " + str(result),
+                "features": {}
             }
-        }
