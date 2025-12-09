@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     AZURE_DOC_ENDPOINT: str
     AZURE_DOC_KEY: str
 
+    GROQ_API_KEY: str
+    MODEL_NAME: str = "groq/llama3-8b-8192"
+
     class Config:
         env_file = ".env"
 
