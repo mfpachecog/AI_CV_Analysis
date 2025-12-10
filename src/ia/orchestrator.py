@@ -4,7 +4,7 @@ from src.ia.crew.tasks import CVAnalysisTasks
 import json
 
 class CrewOrchestrator:
-    def run_analysis(self, candidate_profile: str, job_description: str):
+    def run_analysis(self, candidate_input: str, job_description: str):
         # 1. Instanciar Agentes y Tareas
         agents = CVAnalysisAgents()
         tasks = CVAnalysisTasks()
@@ -15,7 +15,7 @@ class CrewOrchestrator:
 
         # 2. Crear las Tareas encadenadas
         # Tarea A: Leer Candidato
-        task_extract_cand = tasks.extraction_task(extractor, "Candidato", candidate_profile)
+        task_extract_cand = tasks.extraction_task(extractor, "Candidato", candidate_input)
         # Tarea B: Leer Oferta
         task_extract_job = tasks.extraction_task(extractor, "Oferta Laboral", job_description)
         # Tarea C: Comparar (Processor) - Depende de A y B

@@ -32,9 +32,8 @@ async def perform_analysis(request: AnalysisRequest, db = Depends(get_database))
     # Nota: Pasamos is_pdf=False porque ya tenemos el texto extraído en la BD
     try:
         analysis_result = orchestrator.run_analysis(
-            candidate_input=candidate["raw_profile"], 
-            job_description=job["description"],
-            is_pdf=False 
+            candidate["raw_profile"], 
+            job["description"]
         )
     except Exception as e:
         print(f"Error en CrewAI: {e}")
