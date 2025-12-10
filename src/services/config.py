@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     
     # Base de Datos (Mongo/Cosmos)
     DATABASE_URL: str
-    DB_NAME: str = "cv_affinity_db"
+    DB_NAME: str = "cv-affinity-db"
     
     # Inteligencia Artificial (Groq)
     GROQ_API_KEY: str
