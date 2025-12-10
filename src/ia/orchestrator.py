@@ -27,7 +27,8 @@ class CrewOrchestrator:
         crew = Crew(
             agents=[extractor, processor, scorer],
             tasks=[task_extract_cand, task_extract_job, task_process, task_score],
-            verbose=True
+            verbose=True,
+            memory=False  # <--- ¡AGREGA ESTO! (Apaga los embeddings de OpenAI)
         )
 
         # 4. ¡Acción!

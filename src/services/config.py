@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     
     # Inteligencia Artificial (Groq)
     GROQ_API_KEY: str
-    MODEL_NAME: str = "groq/llama3-8b-8192"
+    MODEL_NAME: str 
     
     # Azure Document Intelligence (OCR)
     AZURE_DOC_ENDPOINT: str
