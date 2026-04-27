@@ -1,0 +1,181 @@
+Successfully imported CrewOrchestrator
+Initializing Orchestrator...
+Running analysis (expecting failure due to dummy key, but checking WHICH failure)...
+╭────────────────────────────────────────────────────────────────────────────────────────────── Crew Execution Started ──────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Crew Execution Started                                                                                                                                                                                            │
+│  Name: crew                                                                                                                                                                                                        │
+│  ID: b767b48c-16ca-4e97-bb15-1ec9f9bdf890                                                                                                                                                                          │
+│  Tool Args:                                                                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+└── 📋 Task: 155ec87c-d989-459c-b64c-4b149d0614a2
+    Status: Executing Task...╭───────────────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ─────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Agent: Extractor de Perfiles Técnicos                                                                                                                                                                             │
+│                                                                                                                                                                                                                    │
+│  Task:                                                                                                                                                                                                             │
+│  Analiza el siguiente texto de tipo 'Candidato':                                                                                                                                                                   │
+│                                                                                                                                                                                                                    │
+│  '''                                                                                                                                                                                                               │
+│  Experto en Python y FastAPI con 5 años de experiencia.                                                                                                                                                            │
+│  '''                                                                                                                                                                                                               │
+│                                                                                                                                                                                                                    │
+│  Extrae una lista de habilidades técnicas (skills) y un breve resumen profesional.                                                                                                                                 │
+│  Ignora información irrelevante como direcciones o hobbies.                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+🚀 Crew: crew
+└── 📋 Task: 155ec87c-d989-459c-b64c-4b149d0614a2
+    Status: Executing Task...
+    └── ❌ LLM Failed╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}                                                            │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}[0m
+
+╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}                                                            │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+└── 📋 Task: 155ec87c-d989-459c-b64c-4b149d0614a2
+    Status: Executing Task...
+    ├── ❌ LLM Failed
+    └── 🧠 Thinking...╭───────────────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ─────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Agent: Extractor de Perfiles Técnicos                                                                                                                                                                             │
+│                                                                                                                                                                                                                    │
+│  Task:                                                                                                                                                                                                             │
+│  Analiza el siguiente texto de tipo 'Candidato':                                                                                                                                                                   │
+│                                                                                                                                                                                                                    │
+│  '''                                                                                                                                                                                                               │
+│  Experto en Python y FastAPI con 5 años de experiencia.                                                                                                                                                            │
+│  '''                                                                                                                                                                                                               │
+│                                                                                                                                                                                                                    │
+│  Extrae una lista de habilidades técnicas (skills) y un breve resumen profesional.                                                                                                                                 │
+│  Ignora información irrelevante como direcciones o hobbies.                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+🚀 Crew: crew
+└── 📋 Task: 155ec87c-d989-459c-b64c-4b149d0614a2
+    Status: Executing Task...
+    ├── ❌ LLM Failed
+    └── ❌ LLM Failed╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}                                                            │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}                                                            │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}[0m
+
+
+🚀 Crew: crew
+└── 📋 Task: 155ec87c-d989-459c-b64c-4b149d0614a2
+    Status: Executing Task...
+    ├── ❌ LLM Failed
+    ├── ❌ LLM Failed
+    └── 🧠 Thinking...╭───────────────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ─────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Agent: Extractor de Perfiles Técnicos                                                                                                                                                                             │
+│                                                                                                                                                                                                                    │
+│  Task:                                                                                                                                                                                                             │
+│  Analiza el siguiente texto de tipo 'Candidato':                                                                                                                                                                   │
+│                                                                                                                                                                                                                    │
+│  '''                                                                                                                                                                                                               │
+│  Experto en Python y FastAPI con 5 años de experiencia.                                                                                                                                                            │
+│  '''                                                                                                                                                                                                               │
+│                                                                                                                                                                                                                    │
+│  Extrae una lista de habilidades técnicas (skills) y un breve resumen profesional.                                                                                                                                 │
+│  Ignora información irrelevante como direcciones o hobbies.                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}[0m
+🚀 Crew: crew
+└── 📋 Task: 155ec87c-d989-459c-b64c-4b149d0614a2
+    Status: Executing Task...
+    ├── ❌ LLM Failed
+    ├── ❌ LLM Failed
+    └── ❌ LLM Failed╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}                                                            │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Caught Exception: AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+
+[SUCCESS] It failed with Groq error as expected (since key is dummy).
+
+╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}                                                            │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────────────────────────────────────────────────────────────────────────────── Task Failure ───────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Task Failed                                                                                                                                                                                                       │
+│  Name: 155ec87c-d989-459c-b64c-4b149d0614a2                                                                                                                                                                        │
+│  Agent: Extractor de Perfiles Técnicos                                                                                                                                                                             │
+│  Tool Args:                                                                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────── Crew Failure ───────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Crew Execution Failed                                                                                                                                                                                             │
+│  Name: crew                                                                                                                                                                                                        │
+│  ID: b767b48c-16ca-4e97-bb15-1ec9f9bdf890                                                                                                                                                                          │
+│  Tool Args:                                                                                                                                                                                                        │
+│  Final Output:                                                                                                                                                                                                     │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+╭────────────────────────────────────────────────────────────────────────────────────────────────── Tracing Status ──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Info: Tracing is disabled.                                                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│  To enable tracing, do any one of these:                                                                                                                                                                           │
+│  • Set tracing=True in your Crew/Flow code                                                                                                                                                                         │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file                                                                                                                                                     │
+│  • Run: crewai traces enable                                                                                                                                                                                       │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

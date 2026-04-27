@@ -1,9 +1,18 @@
 from crewai import Agent
 from langchain_groq import ChatGroq
 from src.services.config import settings
+import os
 
 class CVAnalysisAgents:
     def __init__(self):
+        # Configurar variables de entorno para forzar a CrewAI/OpenAI a usar Groq
+        # Esto es necesario porque CrewAI puede hacer fallback a OpenAI internamente
+        os.environ["OPENAI_API_KEY"] = settings.GROQ_API_KEY
+        os.environ["OPENAI_API_BASE"] = "https://api.groq.com/openai/v1"
+        os.environ["OPENAI_BASE_URL"] = "https://api.groq.com/openai/v1"
+        os.environ["OPENAI_MODEL_NAME"] = settings.MODEL_NAME
+        os.environ["MODEL_NAME"] = settings.MODEL_NAME
+        
         # Conectamos el cerebro (Groq - Llama3)
         self.llm = ChatGroq(
             api_key=settings.GROQ_API_KEY,
@@ -20,7 +29,8 @@ class CVAnalysisAgents:
             y extraer listas limpias y estructuradas de tecnologías y habilidades.""",
             verbose=True,
             allow_delegation=False,
-            llm=self.llm
+            llm=self.llm,
+            function_calling_llm=self.llm
         )
 
     def processor_agent(self):
@@ -32,7 +42,8 @@ class CVAnalysisAgents:
             y reportar cuáles coinciden y cuáles faltan.""",
             verbose=True,
             allow_delegation=False,
-            llm=self.llm
+            llm=self.llm,
+            function_calling_llm=self.llm
         )
 
     def scorer_agent(self):
@@ -42,7 +53,8 @@ class CVAnalysisAgents:
             backstory="""Eres el juez final en el proceso de contratación. 
             Basado en el análisis técnico, decides si el candidato es apto. 
             Siempre das un puntaje numérico y una explicación honesta y directa.""",
-            verbose=True,
+            verbose=False,
             allow_delegation=False,
-            llm=self.llm
+            llm=self.llm,
+            function_calling_llm=self.llm
         )

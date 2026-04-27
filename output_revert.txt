@@ -1,0 +1,182 @@
+Successfully imported CrewOrchestrator
+Initializing Orchestrator...
+Running analysis (expecting failure due to dummy key, but checking WHICH failure)...
+╭────────────────────────────────────────────────────────────────────────────────────────────── Crew Execution Started ──────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Crew Execution Started                                                                                                                                                                                            │
+│  Name: crew                                                                                                                                                                                                        │
+│  ID: eaa1f348-dd73-43c4-a160-f9262fc5b921                                                                                                                                                                          │
+│  Tool Args:                                                                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+└── 📋 Task: adab0770-e339-4661-b165-bb992f061f02
+    Status: Executing Task...╭───────────────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ─────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Agent: Extractor de Perfiles Técnicos                                                                                                                                                                             │
+│                                                                                                                                                                                                                    │
+│  Task:                                                                                                                                                                                                             │
+│  Analiza el siguiente texto de tipo 'Candidato':                                                                                                                                                                   │
+│                                                                                                                                                                                                                    │
+│  '''                                                                                                                                                                                                               │
+│  Experto en Python y FastAPI con 5 años de experiencia.                                                                                                                                                            │
+│  '''                                                                                                                                                                                                               │
+│                                                                                                                                                                                                                    │
+│  Extrae una lista de habilidades técnicas (skills) y un breve resumen profesional.                                                                                                                                 │
+│  Ignora información irrelevante como direcciones o hobbies.                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}
+🚀 Crew: crew
+└── 📋 Task: adab0770-e339-4661-b165-bb992f061f02
+    Status: Executing Task...
+    └── ❌ LLM Failed╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at                                        │
+│  https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}                                                                                       │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}[0m
+
+╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at                                        │
+│  https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}                                                                                       │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ─────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Agent: Extractor de Perfiles Técnicos                                                                                                                                                                             │
+│                                                                                                                                                                                                                    │
+│  Task:                                                                                                                                                                                                             │
+│  Analiza el siguiente texto de tipo 'Candidato':                                                                                                                                                                   │
+│                                                                                                                                                                                                                    │
+│  '''                                                                                                                                                                                                               │
+│  Experto en Python y FastAPI con 5 años de experiencia.                                                                                                                                                            │
+│  '''                                                                                                                                                                                                               │
+│                                                                                                                                                                                                                    │
+│  Extrae una lista de habilidades técnicas (skills) y un breve resumen profesional.                                                                                                                                 │
+│  Ignora información irrelevante como direcciones o hobbies.                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}
+🚀 Crew: crew
+└── 📋 Task: adab0770-e339-4661-b165-bb992f061f02
+    Status: Executing Task...
+    ├── ❌ LLM Failed
+    └── ❌ LLM Failed╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at                                        │
+│  https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}                                                                                       │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}[0m
+
+╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at                                        │
+│  https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}                                                                                       │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+└── 📋 Task: adab0770-e339-4661-b165-bb992f061f02
+    Status: Executing Task...
+    ├── ❌ LLM Failed
+    ├── ❌ LLM Failed
+    └── 🧠 Thinking...╭───────────────────────────────────────────────────────────────────────────────────────────────── 🤖 Agent Started ─────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Agent: Extractor de Perfiles Técnicos                                                                                                                                                                             │
+│                                                                                                                                                                                                                    │
+│  Task:                                                                                                                                                                                                             │
+│  Analiza el siguiente texto de tipo 'Candidato':                                                                                                                                                                   │
+│                                                                                                                                                                                                                    │
+│  '''                                                                                                                                                                                                               │
+│  Experto en Python y FastAPI con 5 años de experiencia.                                                                                                                                                            │
+│  '''                                                                                                                                                                                                               │
+│                                                                                                                                                                                                                    │
+│  Extrae una lista de habilidades técnicas (skills) y un breve resumen profesional.                                                                                                                                 │
+│  Ignora información irrelevante como direcciones o hobbies.                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}
+ERROR:root:OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}[0m
+[91mAn unknown error occurred. Please check the details below.[0m
+[91mError details: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}[0m
+
+Caught Exception: AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}
+
+[FAIL] It seems to be trying to use OpenAI!
+❌ Crew: crew
+└── 📋 Task: adab0770-e339-4661-b165-bb992f061f02
+    Assigned to: Extractor de Perfiles Técnicos
+    Status: ❌ Failed
+    ├── ❌ LLM Failed
+    ├── ❌ LLM Failed
+    └── ❌ LLM Failed╭─────────────────────────────────────────────────────────────────────────────────────────────────── Crew Failure ───────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Crew Execution Failed                                                                                                                                                                                             │
+│  Name: crew                                                                                                                                                                                                        │
+│  ID: eaa1f348-dd73-43c4-a160-f9262fc5b921                                                                                                                                                                          │
+│  Tool Args:                                                                                                                                                                                                        │
+│  Final Output:                                                                                                                                                                                                     │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at                                        │
+│  https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}                                                                                       │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────────────────────────────────────────── LLM Error ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  ❌ LLM Call Failed                                                                                                                                                                                                │
+│  Error: OpenAI API call failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-dummy****************************used. You can find your API key at                                        │
+│  https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}}                                                                                       │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────────────────────────────────────── Task Failure ───────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Task Failed                                                                                                                                                                                                       │
+│  Name: adab0770-e339-4661-b165-bb992f061f02                                                                                                                                                                        │
+│  Agent: Extractor de Perfiles Técnicos                                                                                                                                                                             │
+│  Tool Args:                                                                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────────────────────────────────────────────────────── Tracing Status ──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                    │
+│  Info: Tracing is disabled.                                                                                                                                                                                        │
+│                                                                                                                                                                                                                    │
+│  To enable tracing, do any one of these:                                                                                                                                                                           │
+│  • Set tracing=True in your Crew/Flow code                                                                                                                                                                         │
+│  • Set CREWAI_TRACING_ENABLED=true in your project's .env file                                                                                                                                                     │
+│  • Run: crewai traces enable                                                                                                                                                                                       │
+│                                                                                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+

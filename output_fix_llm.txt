@@ -1,0 +1,8 @@
+LiteLLM is not available, falling back to LiteLLM
+Successfully imported CrewOrchestrator
+Initializing Orchestrator...
+Running analysis (expecting failure due to dummy key, but checking WHICH failure)...
+
+Caught Exception: ImportError: Fallback to LiteLLM is not available
+
+[UNCERTAIN] Unknown error: Fallback to LiteLLM is not available
