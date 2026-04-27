@@ -1,8 +1,8 @@
-# AI CV Analyzer 🤖📄
+# AI CV Analyzer 
 
 Backend API construido con FastAPI y Azure Cosmos DB (MongoDB) para el análisis de afinidad entre hojas de vida y ofertas laborales usando Inteligencia Artificial.
 
-## 🚀 Sprint 1: Fundaciones
+## Sprint 1: Fundaciones
 
 Este sprint establece la arquitectura base, la conexión a la nube y el CRUD principal.
 
@@ -12,7 +12,7 @@ Este sprint establece la arquitectura base, la conexión a la nube y el CRUD pri
 - **Gestión de Candidatos:** Endpoint `POST /candidates` y `GET /candidates/{id}`.
 - **Gestión de Ofertas:** Endpoint `POST /jobs` y `GET /jobs/{id}`.
 
-### 🛠️ Configuración e Instalación
+###  Configuración e Instalación
 
 #### 1. Prerrequisitos
 - Python 3.10+
